@@ -11,7 +11,7 @@ use Illuminate\Contracts\Debug\ExceptionHandler;
 
 abstract class TestCase extends BaseTestCase
 {
-    use CreatesApplication;
+    use CreatesApplication, DatabaseMigrations, DatabaseTransactions;
     protected $faker;
 
     /**
@@ -48,7 +48,7 @@ abstract class TestCase extends BaseTestCase
      */
     protected function tearDown():void
     {
-        // $this->artisan('migrate:reset');
+        $this->artisan('migrate:reset');
         parent::tearDown();
     }
 
