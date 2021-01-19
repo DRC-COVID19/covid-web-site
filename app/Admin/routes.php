@@ -29,10 +29,10 @@ Route::group([
     $router->resource('categories', "CategoryController");
     $router->resource('sms-diffusions', "SmsDiffusionController");
     $router->resource('provinces', "ProvinceController");
-    $router->resource('pandemic-stats', "PandemicStatController");
-    $router->resource('diagnostics', "DiagnosticController");
-    $router->resource('hospitals', "HospitalController");
-    $router->resource('hospital-situations', "HospitalSituationController");
-    $router->resource('pandemics', "PandemicController");
-    $router->resource('health-zones', "HealthZoneController");
+    // $router->resource('pandemic-stats', "PandemicStatController");
+    // $router->resource('diagnostics', "DiagnosticController");
+    // $router->resource('hospitals', "HospitalController");
+    // $router->resource('hospital-situations', "HospitalSituationController");
+    // $router->resource('pandemics', "PandemicController");
+    // $router->resource('health-zones', "HealthZoneController");
 });

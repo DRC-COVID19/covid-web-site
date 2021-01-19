@@ -35,7 +35,8 @@ class DashBoardController extends Controller
 
     public function index()
     {
-        return view('diagnosticMaps.dashboard');
+        return redirect(env('API_URL'));
+        // return view('diagnosticMaps.dashboard');
     }
 
     public function getLastPandemicsRegion()

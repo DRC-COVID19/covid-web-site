@@ -1,7 +1,8 @@
 var $ = require("jquery");
 var Chart = require('chart.js');
+const API_URL="http://localhost:8000";
 //require('./bootstrap');
-import './mapBox';
+// import './mapBox';
 
 function drawChart() {
 
@@ -11,7 +12,7 @@ function drawChart() {
     }
 
     var jsonData = $.ajax({
-        url: '/api/pandemicstatsasc',
+        url: API_URL+'/api/pandemicstatsasc',
         dataType: 'json',
     }).done(function (results) {
 
@@ -158,7 +159,7 @@ $(document).ready(function () {
     }
     // get Localisation
 
-   /* if ("geolocation" in navigator) { 
+   /* if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(function (position) {
             console.log("Found your location <br />Lat : " + position.coords.latitude + " </br>Lang :" + position.coords.longitude);
         });
