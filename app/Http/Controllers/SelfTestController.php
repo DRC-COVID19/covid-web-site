@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use GuzzleHttp\Client;
+use Illuminate\Support\Facades\Log;
 
 /**
  * @group User management
@@ -931,18 +932,21 @@ class SelfTestController extends Controller
       $responses["latitude"] = $coordonne[1];
     }
 
+    $responses['param']='nsd';
+    $responses['tiredness_details']=1;
     $client = new Client([
       // Base URI is used with relative requests
       'base_uri' => env('API_URL'),
+
     ]);
 
     try {
-      $promise = $client->post('/api/medicale-orientation', [
-        'form_params' => $responses
+      $client->post('/api/medicale-orientation', [
+        'json' => $responses,
+        'headers'=>['Accept'=>'application/json']
       ]);
-
     } catch (\Throwable $th) {
-      throw $th;
+      Log::error($th->getMessage());
     }
 
 
