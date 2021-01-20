@@ -1,6 +1,5 @@
 var $ = require("jquery");
 var Chart = require('chart.js');
-const API_URL="http://localhost:8000";
 //require('./bootstrap');
 // import './mapBox';
 
@@ -12,7 +11,7 @@ function drawChart() {
     }
 
     var jsonData = $.ajax({
-        url: API_URL+'/api/pandemicstatsasc',
+        url:'/api/pandemicstatsasc',
         dataType: 'json',
     }).done(function (results) {
 
