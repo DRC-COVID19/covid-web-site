@@ -20,45 +20,58 @@
               contre les effets socio-économiques négatifs de la pandémie.
             </p>
         </div>
-        <div class="col-12 col-md-6">
-            <h3 class="mb-4">Principales conclusions</h3>
+        <div class="col-12 col-md-8">
+            <h3 class="mb-4">Principales conclusions du rapport hebdomadaire</h3>
             <div class="sondage-items">
                 <div class="sondage-item">
-                    <span> 57%</span>
-                    <p>La proportion des ménages déclarant une baisse de leurs revenus comparativement au niveau précédant la pandémie reste élevée</p>
+                    <span>1</span>
+                    <div>
+                      <p>À la mi-janvier 2021, le nombre de ménages subissant une baisse de revenus par rapport aux niveaux pré-pandémiques était passé de 47 % en novembre à 62 %.
+
+                      </p>
+                      <p>Il n'y a pas eu d'augmentation statistiquement significative du pourcentage de ménages déclarant que les coûts avaient augmenté</p>
+                    </div>
+
+
+                </div>
+
+                <div class="sondage-item">
+                  <span>2</span>
+                  <div>
+                    <p>
+                      La plupart des répondants étaient conscients que les cas de Covid-19 en RDC étaient en augmentation (six répondants sur dix) et prenaient des mesures en conséquence :
+                    </p>
+                    <ul>
+                      <li>
+                        Les trois quarts se lavent davantage les mains. Neuf sur dix ont porté   un masque au cours des deux dernières semaines.
+                      </li>
+                    </ul>
+                  </div>
+
                 </div>
                 <div class="sondage-item">
-                  <span> 57%</span>
-                  <p>des ménages ont signalé une augmentation des coûts auxquels ils ont dû faire face en septembre comparativement au mois d’août où cette proportion était de 50%.</p>
-                </div>
-                <div class="sondage-item">
-                  <span> 89%</span>
-                  <p>des ménages estiment que la pandémie aura un impact négatif à long terme sur leurs finances.</p>
-                </div>
-                <div class="sondage-item">
-                  <span> 2/3</span>
-                  <p>des ménages à faibles revenus ont vu leur consommation en nourriture et en eau diminuer comparativement au niveau précédant la pandémie.</p>
-                </div>
-                <div class="sondage-item">
-                  <span>39%</span>
-                  <p>des ménages ne savent pas s'ils pourront effectuer leur prochain remboursement de dette.</p>
+                  <span>3</span>
+                  <div>
+                    <p>Six personnes interrogées sur dix pensent que les mesures mises en place permettront de contrôler la pandémie, mais huit personnes interrogées sur dix pensent que les restrictions ont un effet négatif important sur l'économie</p>
+                  </div>
+
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-6 sondage-methods">
+        <div class="col-12 col-md-4 sondage-methods">
             <h3 class="mb-4">Portée</h3>
             <div class="sondage-methods-items">
-                <div class="sondage-methods-item">
+                {{-- <div class="sondage-methods-item">
                     <div class="illustrator">
                         <img src="{{ asset('/img/icon/list.png')}}" />
                     </div>
                     <p>2200 sondés</p>
-                </div>
+                </div> --}}
                 <div class="sondage-methods-item">
                     <div class="illustrator">
                         <img src="{{ asset('/img/icon/calendar.png')}}" />
                     </div>
-                    <p>Du 22 Septembre au 13 Octobre 2020</p>
+                    <p>Du 11 Janvier au 18 Janvier 2021</p>
                 </div>
             </div>
         </div>
