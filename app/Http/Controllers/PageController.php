@@ -18,21 +18,21 @@ class PageController extends Controller
   public function index()
   {
     $pandemicStats = null;
-    try {
-      $client = new Client([
-        // Base URI is used with relative requests
-        'base_uri' => env('API_URL'),
-      ]);
-      $promise = $client->get('/api/lastpandemicstat');
-      $body = $promise->getBody();
-      $stringBody = (string) $body;
-      $objectBody = json_decode($stringBody);
-      if ($objectBody) {
-        $pandemicStats = $objectBody->data;
-      }
-    } catch (\Throwable $th) {
+    // try {
+    //   $client = new Client([
+    //     // Base URI is used with relative requests
+    //     'base_uri' => env('API_URL'),
+    //   ]);
+    //   $promise = $client->get('/api/lastpandemicstat');
+    //   $body = $promise->getBody();
+    //   $stringBody = (string) $body;
+    //   $objectBody = json_decode($stringBody);
+    //   if ($objectBody) {
+    //     $pandemicStats = $objectBody->data;
+    //   }
+    // } catch (\Throwable $th) {
 
-    }
+    // }
     $alerts = Alert::orderBy('created_at', 'desc')->limit(5)->get();
     $preventativeMeasures = Post::where('category_id', 1)->orderBy('order')->orderBy('title')->limit(3)->get();
     $directives = Post::where('category_id', 2)->orderBy('order')->orderBy('title')->limit(1)->get();
